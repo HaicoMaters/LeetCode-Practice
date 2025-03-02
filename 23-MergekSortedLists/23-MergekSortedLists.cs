@@ -1,3 +1,4 @@
+// Last updated: 02/03/2025, 17:07:40
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -9,50 +10,34 @@
  *     }
  * }
  */
-public class Solution {
+public class Solution { // More efficient priority queue solution
     public ListNode MergeKLists(ListNode[] lists) {
-        ListNode head = new ListNode();
-        ListNode current = head;
-        int n = lists.Length;
+        if (lists == null || lists.Length == 0) return null;
 
-        if (lists == null || lists.Length == 0) return head.next;
-        
-        bool finished = false;
-        while(!finished)
-        {
-            int listIndex = -1;
-            int lowestValue = 0;
-            for (int i = 0; i < n; i++)
-            {
-                if (lists[i] == null) continue;
+        PriorityQueue<ListNode, int> pq = new PriorityQueue<ListNode, int>();
 
-                if(listIndex == -1)
-                {
-                    listIndex = i;
-                    lowestValue = lists[i].val;
-                } 
-
-                if (lists[i].val < lowestValue)
-                {
-                    listIndex = i;
-                    lowestValue = lists[i].val;
-                }
-            }
-            
-            if (listIndex == -1) 
-            {
-                current.next = null;
-                finished = true;
-
-            }
-            else
-            {
-                current.next = lists[listIndex];
-                current = current.next;
-                lists[listIndex] = lists[listIndex].next;
+        // Push all the first nodes of the lists into the priority queue
+        foreach (var list in lists) {
+            if (list != null) {
+                pq.Enqueue(list, list.val);
             }
         }
 
-        return head.next;
+        ListNode dummy = new ListNode(0);
+        ListNode current = dummy;
+
+        while (pq.Count > 0) {
+            // Get the smallest element from the heap
+            ListNode smallest = pq.Dequeue();
+            current.next = smallest;
+            current = current.next;
+
+            // If the extracted node has a next node, add it to the heap
+            if (smallest.next != null) {
+                pq.Enqueue(smallest.next, smallest.next.val);
+            }
+        }
+
+        return dummy.next;
     }
 }
