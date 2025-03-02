@@ -1,44 +1,26 @@
-The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 
-P   A   H   N
-A P L S I I G
-Y   I   R
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 
+ 
 
-And then read line by line: "PAHNAPLSIIGYIR"
-
-Write the code that will take a string and make this conversion given a number of rows:
-
-string convert(string s, int numRows);
-
-
- 
 Example 1:
 
-Input: s = "PAYPALISHIRING", numRows = 3
-Output: "PAHNAPLSIIGYIR"
-
-
+Input: x = 123
+Output: 321
 Example 2:
 
-Input: s = "PAYPALISHIRING", numRows = 4
-Output: "PINALSIGYAHRPI"
-Explanation:
-P     I    N
-A   L S  I G
-Y A   H R
-P     I
-
-
+Input: x = -123
+Output: -321
 Example 3:
 
-Input: s = "A", numRows = 1
-Output: "A"
+Input: x = 120
+Output: 21
+ 
 
-
- 
 Constraints:
 
+-231 <= x <= 231 - 1
 
 	1 <= s.length <= 1000
 	s consists of English letters (lower-case and upper-case), ',' and '.'.
