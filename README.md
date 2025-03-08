@@ -6,34 +6,129 @@ A collection of LeetCode problems showcasing efficient problem-solving technique
 
 ### **Notable Solutions:**
 
-- **[2812 - Find the Safest Path in a Grid](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/2812-FindtheSafestPathinaGrid)**  
-  Finds the safest path in a grid by calculating minimum safety at each point using **BFS** and **binary search** for optimal traversal. Time complexity is **O(n²log(n))** with **O(n²)** space.
+#### **[2812 - Find the Safest Path in a Grid](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/2812-FindtheSafestPathinaGrid)**
+- **Description**: Finds the safest path in a grid by calculating minimum safety at each point using **BFS** and **binary search** for optimal traversal.  
+- **Time Complexity**: **O(n²log(n))**  
+- **Space Complexity**: **O(n²)**
+- **Techniques Used**:  
+  - **Breadth-First Search (BFS)**
+  - **Binary Search**
+  - **Grid Traversal**
 
-- **[355 - Design Twitter](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/355-DesignTwitter)**  
-  Implements a simplified version of Twitter with features like posting tweets, following users, and retrieving the news feed. Uses a class based approach with **priority queues** for ordering tweets, and **dictionaries**/**hashsets** for managing user relationships.
+---
 
-- **[51 - N-Queens](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/51-N-Queens)**  
-  A **backtracking** solution to place N queens on a chessboard such that no two queens threaten each other.
+#### **[355 - Design Twitter](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/355-DesignTwitter)**
+- **Description**: Implements a simplified version of Twitter with features like posting tweets, following users, and retrieving the news feed.  
+- **Techniques Used**:  
+  - **Design**
+  - **Priority Queue**
+  - **Hash Table**
 
-- **[52 - N-Queens II](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/52-N-QueensII)**  
-  Extends the N-Queens problem to count all distinct solutions using **backtracking**.
+---
 
-- **[23 - Merge K Sorted Lists](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/23-MergekSortedLists)**  
-  Merges K sorted linked lists into one using a **priority queue** (min-heap) to efficiently retrieve the smallest node across lists. **Dummy node** used to simplify list construction. Time complexity is **O(n log k)** with **O(n + k)** space.
+#### **[51 - N-Queens](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/51-N-Queens)**
+- **Description**: A **backtracking** solution to place N queens on a chessboard such that no two queens threaten each other.  
+- **Time Complexity**: **O(N!)**  
+- **Space Complexity**: **O(N)**
+- **Techniques Used**:  
+  - **Backtracking**
+  - **DFS**  
+  - **Recursion**
 
-- **[494 - Target Sum](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/494-TargetSum)**  
-  A **dynamic programming** solution with **memoization** and **backtracking** to find the number of ways to assign '+' and '-' signs to array elements to reach a target sum. Optimized with **state space optimization** to avoid redundant calculations. **Memoization** improves this solutions time and space complexity from **O(2^n)** to **O(n * sum(nums))**.
+---
 
-- **[113 - Path Sum II](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/113-PathSumII)**  
-  Uses **DFS** and **backtracking** to find all paths in a binary tree that sum to a target value, maintaining the current path and checking if it matches the target. Time Complexity is **O(n * height)** space is the same.
+#### **[52 - N-Queens II](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/52-N-QueensII)**
+- **Description**: Extends the N-Queens problem to count all distinct solutions using **backtracking**.  
+- **Time Complexity**: **O(N!)**  
+- **Space Complexity**: **O(N)**
+- **Techniques Used**:  
+  - **Backtracking**
+  - **DFS**
+  - **Recursion**
 
-- **[973 - K Closest Points to Origin](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/973-KClosestPointstoOrigin)**  
-  Finds the K closest points to the origin using a **priority queue** (min-heap) and **squared Euclidean distance** for efficient comparison. Space and time complexity optimized to **O(N log K)**.
+---
 
-- **[289 - Game of Life](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/289-GameofLife)**  
-  Simulates the **Game of Life** with **in-place updates** using **neighbor counting** and **state encoding** for space optimization. Time complexity is **O(m * n)** with **O(1)** space.
+#### **[23 - Merge K Sorted Lists](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/23-MergekSortedLists)**
+- **Description**: Merges K sorted linked lists into one using a **priority queue** (min-heap) to efficiently retrieve the smallest node across lists. A **dummy node** is used to simplify list construction.  
+- **Time Complexity**: **O(n log k)**  
+- **Space Complexity**: **O(n + k)**
+- **Techniques Used**:  
+  - **Heap**
+  - **Linked List**
+  - **Divide and Conquer**
 
-- **[2401 - Longest Nice Subarray](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/2401-LongestNiceSubarray)**  
-  Uses **bitwise manipulation** with a **sliding window** approach to find the longest subarray where no two elements share common bits. Time complexity is **O(n)** with **O(1)** space.
+---
 
---- 
+#### **[494 - Target Sum](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/494-TargetSum)**
+- **Description**: A **dynamic programming** solution with **memoization** and **backtracking** to find the number of ways to assign '+' and '-' signs to array elements to reach a target sum. Optimized with **state space optimization** to avoid redundant calculations.  
+- **Time Complexity**: **O(n * sum(nums))**  
+- **Space Complexity**: **O(n * sum(nums))**
+- **Techniques Used**:  
+  - **Dynamic Programming**
+  - **Backtracking**
+  - **Memoization**
+  - **DFS**
+
+---
+
+#### **[113 - Path Sum II](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/113-PathSumII)**
+- **Description**: Uses **DFS** and **backtracking** to find all paths in a binary tree that sum to a target value, maintaining the current path and checking if it matches the target.  
+- **Time Complexity**: **O(n * height)**  
+- **Space Complexity**: **O(height)**
+- **Techniques Used**:  
+  - **DFS**
+  - **Backtracking**
+  - **Binary Tree**
+
+---
+
+#### **[973 - K Closest Points to Origin](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/973-KClosestPointstoOrigin)**
+- **Description**: Finds the K closest points to the origin using a **priority queue** (min-heap) and **squared Euclidean distance** for efficient comparison.  
+- **Time Complexity**: **O(N log K)**  
+- **Space Complexity**: **O(N)**
+- **Techniques Used**:  
+  - **Heap**
+  - **Sorting**
+  - **Geometry**
+
+---
+
+#### **[289 - Game of Life](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/289-GameofLife)**
+- **Description**: Simulates the **Game of Life** with **in-place updates** using **neighbor counting** and **state encoding** for space optimization.  
+- **Time Complexity**: **O(m * n)**  
+- **Space Complexity**: **O(1)**
+- **Techniques Used**:  
+  - **Simulation**
+  - **Array**
+  - **Game Theory**
+
+---
+
+#### **[2401 - Longest Nice Subarray](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/2401-LongestNiceSubarray)**
+- **Description**: Uses **bitwise manipulation** with a **sliding window** approach to find the longest subarray where no two elements share common bits.  
+- **Time Complexity**: **O(n)**  
+- **Space Complexity**: **O(1)**
+- **Techniques Used**:  
+  - **Bit Manipulation**
+  - **Sliding Window**
+  - **Array**
+
+---
+
+#### **[138 - Copy List with Random Pointer](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/138-CopyListwithRandomPointer)**
+- **Description**: Creates a deep copy of a linked list with next and random pointers using **constant space** by interleaving the copied nodes within the original list. The random pointers are then assigned by leveraging the interleaved structure. The list is separated into the original and copied lists at the end.  
+- **Time Complexity**: **O(n)**  
+- **Space Complexity**: **O(1)** auxiliary space
+- **Techniques Used**:  
+  - **Linked List**
+  - **DFS**
+  - **Graph**
+
+---
+
+### **Some Techniques Used Across Other Problems:**
+
+**Quickselect**, **Trie**, **Tree**, **Depth-First Search (DFS)**, **Breadth-First Search (BFS)**, **Bit Manipulation**, **Binary Search**, **Sorting**, **Two Pointers**, **Linked List**, **Stack**, **Matrix**, **Divide and Conquer**, **Dynamic Programming**
+
+
+---
