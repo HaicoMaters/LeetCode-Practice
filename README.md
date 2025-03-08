@@ -99,7 +99,7 @@ A collection of LeetCode problems showcasing efficient problem-solving technique
 - **Space Complexity**: **O(1)**
 - **Techniques Used**:  
   - **Simulation**
-  - **Array**
+  - **Matrix**
   - **Game Theory**
 
 ---
@@ -123,12 +123,27 @@ A collection of LeetCode problems showcasing efficient problem-solving technique
   - **Linked List**
   - **DFS**
   - **Graph**
+ 
+
+---
+
+#### **[208 - Implement Trie (Prefix Tree)](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/208-ImplementTrie(PrefixTree))**
+- **Description**: Implements a Trie (Prefix Tree) data structure, which supports efficient insert, search, and prefix checking operations. The Trie is built using **TrieNode** objects that store a dictionary of child nodes, enabling quick access to characters in a word or prefix.  
+  - **Insert**: Adds a word to the Trie, creating new nodes for characters that don't exist already.
+  - **Search**: Checks whether a word exists in the Trie.
+  - **StartsWith**: Checks if any word in the Trie starts with a given prefix.
+  
+- **Time Complexity**: **O(n)**, where `n` is the length of the word being inserted, searched, or checked for prefix.
+- **Space Complexity**: **O(n)**, where `n` is the total number of characters stored in the Trie (including all words inserted).
+- **Techniques Used**:  
+  - **Trie**
+  - **Hash Table**
+  - **Design**
 
 ---
 
 ### **Some Techniques Used Across Other Problems:**
 
 **Quickselect**, **Trie**, **Tree**, **Depth-First Search (DFS)**, **Breadth-First Search (BFS)**, **Bit Manipulation**, **Binary Search**, **Sorting**, **Two Pointers**, **Linked List**, **Stack**, **Matrix**, **Divide and Conquer**, **Dynamic Programming**
-
 
 ---
