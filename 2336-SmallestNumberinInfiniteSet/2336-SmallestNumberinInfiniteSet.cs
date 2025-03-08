@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-
+// Last updated: 08/03/2025, 13:57:54
 public class SmallestInfiniteSet {
-    private int nextToAdd;
-    private SortedSet<int> set;
+    
+    int nextToAdd;
+    SortedSet<int> set;
 
     public SmallestInfiniteSet() {
         set = new SortedSet<int>(); 
