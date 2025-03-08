@@ -1,29 +1,18 @@
+// Last updated: 08/03/2025, 14:18:19
 public class Solution {
+    // Faster DFS solution
     public bool CanVisitAllRooms(IList<IList<int>> rooms) {
-        int n = rooms.Count; // number of rooms
-        Queue<int> keys = new Queue<int>();
-        HashSet<int> visited = new HashSet<int>(); // for ignoring duplicate keys
+        HashSet<int> visited = new HashSet<int>();
+        VisitRooms(rooms, 0, visited);
+        return visited.Count == rooms.Count;
+    }
 
-        // Get the keys from room 0
-        foreach(int key in rooms[0])
-        {
-            keys.Enqueue(key);
+    public void VisitRooms(IList<IList<int>> rooms, int room, HashSet<int> visited) {
+        if (visited.Contains(room)) return; // skip already visited rooms
+        
+        visited.Add(room);
+        foreach (int key in rooms[room]) {
+            VisitRooms(rooms, key, visited); // visit any reachable rooms
         }
-        visited.Add(0);
-
-        while (keys.Count > 0){
-            // Use key
-            int room = keys.Dequeue();
-            visited.Add(room);
-
-            // Add new keys
-            foreach(int key in rooms[room]){
-                if(!visited.Contains(key)){ // ignore any duplicate keys
-                    keys.Enqueue(key);
-                }
-            }
-        }
-
-        return rooms.Count == visited.Count;
     }
 }
