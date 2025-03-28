@@ -1,22 +1,21 @@
-// Last updated: 28/03/2025, 14:51:55
+// Last updated: 28/03/2025, 14:53:43
 public class Solution {
-    public int[] XorQueries(int[] arr, int[][] queries) {
-        int n = queries.Length;
+    public int[] XorQueries(int[] arr, int[][] queries) { // Better O(n) solution
+    int n = arr.Length;
+        int[] prefixXor = new int[n + 1];
+        int[] result = new int[queries.Length];
 
-        int[] xors = new int[n];
-
-        for (int i = 0; i < n; i++)
-        {
-            int xor = 0;
-
-            for (int j = queries[i][0]; j <= queries[i][1]; j++)
-            {
-                xor ^= arr[j]; 
-            }
-
-            xors[i] = xor;
+        for (int i = 0; i < n; i++) {
+            prefixXor[i + 1] = prefixXor[i] ^ arr[i];
         }
 
-        return xors;
+        for (int i = 0; i < queries.Length; i++) {
+            int left = queries[i][0];
+            int right = queries[i][1];
+
+            result[i] = prefixXor[right + 1] ^ prefixXor[left];
+        }
+
+        return result;
     }
 }
