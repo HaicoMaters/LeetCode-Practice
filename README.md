@@ -142,6 +142,18 @@ A collection of LeetCode problems showcasing efficient problem-solving technique
 
 ---
 
+#### **[427 - Construct QuadTree](https://github.com/HaicoMaters/LeetCode-Practice/tree/main/427-ConstructQuadTree)**
+- **Description**: Builds a **quad tree** from a binary grid where each node represents a uniform subregion (either all 0s or all 1s). If a region is not uniform, it is divided into four quadrants recursively. The implementation tracks subgrid bounds for each node using a dictionary to support recursive construction of the tree.
+- **Time Complexity**: **O(n² log n)** – Each cell is visited exactly once during leaf determination n² and then log n for the number of recursive levels (as the grid size keeps being split into 4).
+- **Space Complexity**: **O(n²)** – In the worst case, each cell becomes a leaf node in the quad tree.
+- **Techniques Used**:  
+  - **Recursion**  
+  - **Divide and Conquer**  
+  - **Tree Construction**  
+  - **2D Grid Processing**
+
+---
+
 ### **Some Techniques Used Across Other Problems:**
 
 **Quickselect**, **Trie**, **Tree**, **Depth-First Search (DFS)**, **Breadth-First Search (BFS)**, **Bit Manipulation**, **Binary Search**, **Sorting**, **Two Pointers**, **Linked List**, **Stack**, **Matrix**, **Divide and Conquer**, **Dynamic Programming**
