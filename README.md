@@ -154,6 +154,20 @@ A collection of LeetCode problems showcasing efficient problem-solving technique
 
 ---
 
+#### **[378 - Kth Smallest Element in a Sorted Matrix](https://github.com/HaicoMaters/LeetCode-Practice/blob/main/378-KthSmallestElementinaSortedMatrix/version/csharp/)**
+- **Description**: In a matrix with a where the columns are sorted in non-decending order and the rows are sorted in non-decending order, two different solutions to find the kth smallest element.
+   - **[Solution 1](https://github.com/HaicoMaters/LeetCode-Practice/blob/main/378-KthSmallestElementinaSortedMatrix/version/csharp/378-KthSmallestElementinaSortedMatrix_20250430_114954.cs)**: This solution uses a **priority queue** to store and extract elements. It enqueues values from a submatrix defined by the smaller of the size of the matrix or `k`, then finds the kth smallest element by repeatedly dequeuing the smallest element.
+  - **[Solution 2](https://github.com/HaicoMaters/LeetCode-Practice/blob/main/378-KthSmallestElementinaSortedMatrix/version/csharp/378-KthSmallestElementinaSortedMatrix_20250430_121608.cs)**: This is the better optimized solution, where **binary search** is used to search for the kth smallest element by operating on the values in the matrix rather than on the entire matrix. This improves performance by reducing the search space and avoids using additional memory for a priority queue. This solution has O(1) space complexity.
+
+- **Time Complexity**: **O(n * log(range of values))** – For the better solution. The solution uses **binary search** over the range of values in the matrix. The binary search takes **log(range of values)** steps, where the range of values is the difference between the smallest and largest values in the matrix. For each step, the `CountLessEqual` function is called, which takes **O(n)** time as it scans through the matrix.
+- **Space Complexity**: **O(1)** – For the better solution.
+
+- **Techniques Used**:  
+  - **Binary Search**  
+  - **Heap/Priority Queue (for the first solution)**
+  - **Matrix Traversal**
+---
+
 ### **Some Techniques Used Across Other Problems:**
 
 **Quickselect**, **Trie**, **Tree**, **Depth-First Search (DFS)**, **Breadth-First Search (BFS)**, **Bit Manipulation**, **Binary Search**, **Sorting**, **Two Pointers**, **Linked List**, **Stack**, **Matrix**, **Divide and Conquer**, **Dynamic Programming**
